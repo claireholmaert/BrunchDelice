@@ -3,7 +3,7 @@ import Image from '../../public/medias/images/enjoy.jpeg';
 
 function Enjoy() {
   return (
-    <div>
+    <div className='hidden'>
       <div className='relative'>
         <img className='absolute w-full z-0' src={Image} alt="" />
         <div className='absolute top-80 w-full flex items-center justify-center'>
