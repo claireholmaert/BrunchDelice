@@ -3,7 +3,7 @@ import Image from '../../public/medias/images/plat-fraise.png';
 
 function Quality() {
   return (
-    <div className="bg-yellow w-full h-screen rounded-sm mt-20">
+    <div className="bg-yellow w-full rounded-sm mt-20">
       <div className="flex items-center p-40 space-x-10">
         <div className="w-full space-y-5 text-white tracking-wide">
             <h2 className="text-4xl">Our Food Quality</h2>
