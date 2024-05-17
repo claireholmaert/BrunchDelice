@@ -1,9 +1,13 @@
 // images
 import Image from '../../public/medias/images/plat-fraise.png';
 
+// elements
+import Container from './elements/Container';
+
 function Quality() {
   return (
     <div className="bg-yellow w-full rounded-sm mt-20">
+      <Container>
       <div className="flex items-center p-40 space-x-10">
         <div className="w-full space-y-5 text-white tracking-wide">
             <h2 className="text-4xl">Our Food Quality</h2>
@@ -13,6 +17,7 @@ function Quality() {
             <img src={Image} alt="" />
         </div>
       </div>
+      </Container>
     </div>
   )
 }
