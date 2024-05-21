@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Logo from '../../../public/medias/images/pancakes.png';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
@@ -19,12 +19,20 @@ function classNames(...classes) {
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
+    useEffect(() => {
+        if (menuOpen) {
+            document.body.classList.add('overflow-hidden');
+        } else {
+            document.body.classList.remove('overflow-hidden');
+        }
+    }, [menuOpen]);
+
     return (
-        <header className='bg-black text-white relative'>
+        <header className='text-white relative'>
             <div className='xl:pt-10 xl:px-40'>
                 <nav className='flex items-center justify-between text-white text-xl'>
                     {/* Mobile menu button */}
-                    <div className='flex items-center xl:hidden z-30 ml-6'>
+                    <div className='flex items-center xl:hidden z-50 ml-6'>
                         <button onClick={() => setMenuOpen(!menuOpen)} className='text-white'>
                             {menuOpen ? (
                                 <XMarkIcon className='w-8 h-8' />
@@ -77,7 +85,7 @@ function Header() {
 
                 {/* Mobile menu (visible when menuOpen is true) */}
                 {menuOpen && (
-                    <div className='xl:hidden fixed inset-0 bg-black bg-opacity-75 z-10 flex flex-col items-center pt-20 mt-10'>
+                    <div className='xl:hidden fixed inset-0 bg-black bg-opacity-75 z-30 flex flex-col items-center pt-20 mt-10 space-y-5'>
                         {navigation.map((item) => (
                             <a
                                 key={item.name}
@@ -97,7 +105,7 @@ function Header() {
                 {/* Backdrop (visible when menuOpen is true) */}
                 {menuOpen && (
                     <div
-                        className='fixed inset-0 bg-gray-900 z-0'
+                        className='fixed inset-0 bg-gray-900 z-20'
                         onClick={() => setMenuOpen(false)}
                     ></div>
                 )}

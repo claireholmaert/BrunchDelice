@@ -15,7 +15,7 @@ function HeroTop() {
         <Header />          
             <Container>
                 <div className='flex items-center mt-40'>
-                    <div className=''>
+                    <div className='hidden xl:block'>
                     <img 
                     src={Image2} 
                     className='rotate-[150deg]'
@@ -23,7 +23,7 @@ function HeroTop() {
                     />
                     </div>
                     <div className='flex flex-col items-start space-y-8'>
-                    <h2 className='text-yellow text-6xl tracking-wide'>Contact Us For Best Breakfast</h2>
+                    <h2 className='text-yellow text-4xl sm:text-6xl tracking-wide'>Contact Us For Best Breakfast</h2>
                     <p className='text-white'>Discover a unique culinary experience with our irresistible brunch! Authentic and creative flavors await you in a warm and friendly setting. Join us for an unforgettable gourmet experience!</p>
                     <button className='bg-yellow px-5 py-3 rounded-md animate hover:bg-yellow/70'>Contact Us</button>
                     </div>
