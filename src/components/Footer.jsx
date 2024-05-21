@@ -3,7 +3,7 @@ import Logo from '../../public/medias/images/pancakes.png';
 
 function Footer() {
   return (
-    <div className="bg-gray-500 w-full h-96 text-white">
+    <div className="bg-gray-500 w-full text-white">
       <div className="flex flex-col items-center justify-center p-20 space-y-10">
         <div className='flex items-center space-x-5'>
             <img 
@@ -13,7 +13,7 @@ function Footer() {
             />
             <h2 className='text-2xl'>Brunch Delice</h2>
         </div>
-        <div className='flex items-center space-x-10 uppercase'>
+        <div className='flex flex-col lg:flex-row items-center space-x-10 space-y-5 lg:space-y-0 uppercase'>
             <a href="">Home</a>
             <a href="">About us</a>
             <a href="">Services</a>

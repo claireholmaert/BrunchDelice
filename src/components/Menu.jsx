@@ -7,7 +7,7 @@ function Menu() {
   return (
     <div className="w-full mt-40 tracking-wide">
         <h2 className="text-center text-4xl text-white">Our Menu</h2>
-        <div className="grid grid-cols-3 gap-5 p-20">
+        <div className="grid lg:grid-cols-3 gap-5 p-20">
             <div className= "w-full">
                 <div className="flex flex-col space-y-5">
                     <img 
